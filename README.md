@@ -35,6 +35,7 @@ Similar to last year I will continue to time my functions and record their times
 | Day  | Date/Time Completed | Name                    |
 | :-:  | :-----------------: | :---------------------- |
 |  1   | Dec 2 - 11:48       | Trebuchet?!             |
+|  2   | Dec 2 - 14:35       | Cube Conundrum          |
 
 ## Get Involved
 

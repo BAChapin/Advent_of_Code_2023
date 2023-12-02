@@ -1,9 +1,11 @@
 # Records
 
-| Day # | Part # | Change Summary<sup>1</sup> | Time<sup>2</sup> |
-| :---: | :----: | :------------------------- | :--------------: |
-| 1     | 1      | Initial Design             | 18.65 ms         |
-| 1     | 2      | Initial Design             | 85.36 ms         |
+| Day # | Name           | Part # | Change Summary<sup>1</sup> | Time<sup>2</sup> |
+| :---: | :------------- | :----: | :------------------------- | :--------------: |
+| 1     | Trebuchet?!    | 1      | Initial Design             | 18.65 ms         |
+| 1     | Trebuchet?!    | 2      | Initial Design             | 85.36 ms         |
+| 2     | Cube Conundrum | 1      | Initial Design             | 12.72 ms         |
+| 2     | Cube Conundrum | 2      | Initial Design             | 9.97 ms          |
 
 <sup>1</sup> This will clarify the change that was made to change the time metrics.
 
