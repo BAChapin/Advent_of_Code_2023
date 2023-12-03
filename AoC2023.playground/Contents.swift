@@ -1,6 +1,6 @@
 import UIKit
 
-let object = Day2()
+let object = Day3()
 
 //speedCheck(object.partOne)
 //speedCheck(object.partTwo)

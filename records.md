@@ -6,6 +6,8 @@
 | 1     | Trebuchet?!    | 2      | Initial Design             | 85.36 ms         |
 | 2     | Cube Conundrum | 1      | Initial Design             | 12.72 ms         |
 | 2     | Cube Conundrum | 2      | Initial Design             | 9.97 ms          |
+| 3     | Gear Ratios    | 1      | Initial Design             | 44.61 ms         |
+| 3     | Gear Ratios    | 2      | Initial Design             | 102.86 ms        |
 
 <sup>1</sup> This will clarify the change that was made to change the time metrics.
 
