@@ -8,6 +8,9 @@
 | 2     | Cube Conundrum | 2      | Initial Design             | 9.97 ms          |
 | 3     | Gear Ratios    | 1      | Initial Design             | 44.61 ms         |
 | 3     | Gear Ratios    | 2      | Initial Design             | 102.86 ms        |
+| 4     | Scratchcards   | 1      | Initial Design             | 25.03 ms         |
+| 4     | Scratchcards   | 2      | Initial Design             | 1 m 27 s         |
+| 4     | Scratchcards   | 2      | Cleaner Design             | 1 m 36 s         |
 
 <sup>1</sup> This will clarify the change that was made to change the time metrics.
 

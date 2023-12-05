@@ -22,7 +22,7 @@ public struct Day4: SolutionEngine {
     
     public func partTwo() {
         let game = ScratchCardGame(input: lines)
-        let answer = game.processAllCards()
+        let answer = game.processCards()
         print("Your total number of scratchcards:", answer)
     }
 }
@@ -30,6 +30,7 @@ public struct Day4: SolutionEngine {
 extension Day4 {
     struct ScratchCardGame {
         let cards: [Card]
+        var cardCopies: [ClosedRange<Int>?] = []
         
         init(input: [String]) {
             cards = input.map { Card(input: $0) }
@@ -40,37 +41,31 @@ extension Day4 {
             return cardScores.reduce(0, { $0 + $1 })
         }
         
-        func processAllCards() -> Int {
-            var processedCards = 0
-            
-            for (index, card) in cards.enumerated() {
-                let cardsToCopy = card.numberOfWinningScratches()
-                
-                if cardsToCopy > 0 {
-                    let copiedCards = processCard(indexOfCardsToCopy: (index + 1)...(index + cardsToCopy))
-                    processedCards += copiedCards
-                }
-                
-                processedCards += 1
-            }
-            
-            return processedCards
+        mutating func processCards() -> Int {
+            cardCopies = cards.enumerated().map { $1.copiedIndicies($0) }
+            return cardCopies.map { processIndicies($0) }.reduce(0, { $0 + $1 })
         }
         
-        private func processCard(indexOfCardsToCopy range: ClosedRange<Int>) -> Int {
-            var runningTotal = 0
-            
-            for index in range {
-                let cardsToCopy = cards[index].numberOfWinningScratches()
-                
-                if cardsToCopy > 0 {
-                    runningTotal += processCard(indexOfCardsToCopy: (index + 1)...(index + cardsToCopy))
-                }
-                runningTotal += 1
+        private func processIndicies(_ indicies: ClosedRange<Int>?) -> Int {
+            if let indicies {
+                let copies = indicies.map { cardCopies[$0] }
+                return copies.map { processIndicies($0) }.reduce(0, { $0 + $1 })
+            } else {
+                return 1
             }
-            
-            return runningTotal
         }
+        
+        func processCards(_ indicies: ClosedRange<Int>? = nil) -> Int {
+            if let indicies {
+                let tempCards = indicies.map { ($0, cards[$0]) }.compactMap { $1.copiedIndicies($0) }
+                return tempCards.map { processCards($0) }.reduce(0, { $0 + $1 }) + indicies.count
+            } else {
+                let cardCopies = cards.enumerated().compactMap { $1.copiedIndicies($0) }
+                return cardCopies.map { processCards($0) }.reduce(0, { $0 + $1 }) + cards.count
+            }
+        }
+        
+        
     }
 }
 
@@ -112,6 +107,11 @@ extension Day4.ScratchCardGame {
                     return 2 * partialResult
                 }
             }
+        }
+        
+        func copiedIndicies(_ index: Int) -> ClosedRange<Int>? {
+            let winningScratches = numberOfWinningScratches()
+            return winningScratches != 0 ?  (index + 1)...(index + winningScratches) : nil
         }
     }
 }
