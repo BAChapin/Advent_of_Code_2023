@@ -17,12 +17,13 @@ public func speedCheck(runCount: Int = 1, _ fn: () -> Void) {
     let totalElapsedTime = end.timeIntervalSince1970 - start.timeIntervalSince1970
     print("Total Elapsed Time:", "\(calculateTimeOutput(elapsedTime: totalElapsedTime))")
     print("Average Execution Time:", "\(calculateTimeOutput(elapsedTime: totalElapsedTime / Double(runCount)))")
+    print(String(repeating: "*", count: 80))
 }
 
 func calculateTimeOutput(elapsedTime: TimeInterval) -> String {
     if elapsedTime >= 60 {
         let minutes = floor(elapsedTime / 60)
-        let seconds = round(elapsedTime.remainder(dividingBy: 60))
+        let seconds = round(elapsedTime.truncatingRemainder(dividingBy: 60))
         return "\(minutes) m \(seconds) s"
     } else if elapsedTime >= 1 {
         let seconds = floor(elapsedTime)

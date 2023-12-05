@@ -37,6 +37,7 @@ Similar to last year I will continue to time my functions and record their times
 |  1   | Dec 2 - 11:48       | Trebuchet?!             |
 |  2   | Dec 2 - 14:35       | Cube Conundrum          |
 |  3   | Dec 3 - 16:50       | Gear Ratios             |
+|  4   | Dec 4 - 20:55       | Scratchcards            |
 
 ## Get Involved
 
