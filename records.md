@@ -14,6 +14,8 @@
 | 5     | If You Give A Seed A Fertilizer | 1      | Initial Design             | 1 m 36 s         |
 | 6     | Wait For It                     | 1      | Initial Design             | 0.12 ms          |
 | 6     | Wait For It                     | 2      | Initial Design             | 10.0 s 58.39 ms  |
+| 6     | Wait For It                     | 1      | Improved Design            | 0.05 ms          |
+| 6     | Wait For It                     | 2      | Imrpoved Design            | 3.0 s 445.72 ms  |
 
 <sup>1</sup> This will clarify the change that was made to change the time metrics.
 

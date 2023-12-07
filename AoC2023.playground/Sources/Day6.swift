@@ -56,15 +56,31 @@ extension Day6 {
         }
         
         func amountOfWinningTimes() -> Int {
-            var runningTimes: Int = 0
-            for milliseconds in 1..<time {
-                let speed = milliseconds
-                let remainingTime = time - milliseconds
-                let distance = speed * remainingTime
-                if distance > recordDistance {
+            var runningTimes: Int = 1
+            let halfTime = time / 2
+            for timeAdjustment in 1..<halfTime {
+                let firstHalfSpeed = halfTime - timeAdjustment
+                let secondHalfSpeed = halfTime + timeAdjustment
+                let firstRemainingTime = time - firstHalfSpeed
+                let secondRemainingTime = time - secondHalfSpeed
+                let firstDistance = firstHalfSpeed * firstRemainingTime
+                let secondDistance = secondHalfSpeed * secondRemainingTime
+                
+                if firstDistance > recordDistance {
                     runningTimes += 1
                 }
+                
+                if secondDistance > recordDistance {
+                    runningTimes += 1
+                }
+                
+                if firstDistance <= recordDistance {
+                    if secondDistance <= recordDistance {
+                        return runningTimes
+                    }
+                }
             }
+            
             return runningTimes
         }
     }
