@@ -1,9 +1,9 @@
 import UIKit
 
-let object = Day4()
+let object = Day6()
 
-speedCheck(object.partOne)
-speedCheck(object.partTwo)
+//speedCheck(object.partOne)
+//speedCheck(object.partTwo)
 
-//speedCheck(runCount: 10, object.partOne)
-//speedCheck(runCount: 10, object.partTwo)
+speedCheck(runCount: 10, object.partOne)
+speedCheck(runCount: 10, object.partTwo)

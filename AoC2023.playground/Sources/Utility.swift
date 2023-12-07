@@ -27,7 +27,7 @@ func calculateTimeOutput(elapsedTime: TimeInterval) -> String {
         return "\(minutes) m \(seconds) s"
     } else if elapsedTime >= 1 {
         let seconds = floor(elapsedTime)
-        let milliseconds = round(elapsedTime * 100000) / 100
+        let milliseconds = round((elapsedTime * 100000)).truncatingRemainder(dividingBy: 100000) / 100
         return "\(seconds) s \(milliseconds) ms"
     } else {
         let milliseconds = round(elapsedTime * 100000) / 100

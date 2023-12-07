@@ -1,16 +1,19 @@
 # Records
 
-| Day # | Name           | Part # | Change Summary<sup>1</sup> | Time<sup>2</sup> |
-| :---: | :------------- | :----: | :------------------------- | :--------------: |
-| 1     | Trebuchet?!    | 1      | Initial Design             | 18.65 ms         |
-| 1     | Trebuchet?!    | 2      | Initial Design             | 85.36 ms         |
-| 2     | Cube Conundrum | 1      | Initial Design             | 12.72 ms         |
-| 2     | Cube Conundrum | 2      | Initial Design             | 9.97 ms          |
-| 3     | Gear Ratios    | 1      | Initial Design             | 44.61 ms         |
-| 3     | Gear Ratios    | 2      | Initial Design             | 102.86 ms        |
-| 4     | Scratchcards   | 1      | Initial Design             | 25.03 ms         |
-| 4     | Scratchcards   | 2      | Initial Design             | 1 m 27 s         |
-| 4     | Scratchcards   | 2      | Cleaner Design             | 1 m 36 s         |
+| Day # | Name                            | Part # | Change Summary<sup>1</sup> | Time<sup>2</sup> |
+| :---: | :------------------------------ | :----: | :------------------------- | :--------------: |
+| 1     | Trebuchet?!                     | 1      | Initial Design             | 18.65 ms         |
+| 1     | Trebuchet?!                     | 2      | Initial Design             | 85.36 ms         |
+| 2     | Cube Conundrum                  | 1      | Initial Design             | 12.72 ms         |
+| 2     | Cube Conundrum                  | 2      | Initial Design             | 9.97 ms          |
+| 3     | Gear Ratios                     | 1      | Initial Design             | 44.61 ms         |
+| 3     | Gear Ratios                     | 2      | Initial Design             | 102.86 ms        |
+| 4     | Scratchcards                    | 1      | Initial Design             | 25.03 ms         |
+| 4     | Scratchcards                    | 2      | Initial Design             | 1 m 27 s         |
+| 4     | Scratchcards                    | 2      | Cleaner Design             | 1 m 36 s         |
+| 5     | If You Give A Seed A Fertilizer | 1      | Initial Design             | 1 m 36 s         |
+| 6     | Wait For It                     | 1      | Initial Design             | 0.12 ms          |
+| 6     | Wait For It                     | 2      | Initial Design             | 10.0 s 58.39 ms  |
 
 <sup>1</sup> This will clarify the change that was made to change the time metrics.
 
